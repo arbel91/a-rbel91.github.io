@@ -8,7 +8,7 @@ border-bottom: dashed; border-bottom-color: blue;
 border-top: dashed; border-top-color: red;
 }
  hr {color: white;}
-
+a:hover {color: yellow} 
  header {background-color: blue }
 
  hr {border-bottom: color:darkblue}
