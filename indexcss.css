@@ -1,7 +1,14 @@
 body {
     background-color: black;
-    font-family: IMpact, serif;
+    font-family: Impact, serif;
     font-style: oblique;
     font-size: 30px;
 color: white;
+border-bottom: dashed; border-bottom-color: blue;
+border-top: dashed; border-top-color: red;
 }
+ hr {color: white;}
+
+ header {background-color: blue }
+
+ hr {border-bottom: color:darkblue}

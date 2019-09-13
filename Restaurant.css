@@ -1,7 +1,31 @@
 body {
   background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT-LwubGoOjdb4-8jk54c-IN4UQegLvcoy3EUlVmeRcPF9hG_TyA);
+
 background-attachment: scroll;
+background-size: contain;
+font-family: times,sans-serif;
+font-size: 15px;
+line-height: 1.5;
+color: #000!important;
+border-collapse: collapse;
+border-spacing: 0;
+box-sizing: inherit;
+border-bottom: 1px solid #ddd;
+background-color: #f1f1f1;
 color: darkblue;
 font-weight: 900;
 font-size: 50px;
 }
+h1 h2 h3 {line-height: 1.5;
+box-sizing: inherit;
+box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+z-index: 2;
+font-size: 17px;
+background-color: #5f5f5f;
+color: #f1f1f1;
+width: 100%;
+padding: 0;
+letter-spacing: 1px;
+font-family: "Segoe UI",Arial,sans-serif;
+position: relative;
+top: 0px;}
