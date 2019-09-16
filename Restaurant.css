@@ -7,8 +7,8 @@ h2{font-family: 'Open Sans', sans-serif; font-weight:normal; font-size:50px;}
 h3{font-family: 'Open Sans', sans-serif; font-weight:normal; font-size:50px; color:#fff; }
 /*h2{font-family: 'Oswald', sans-serif; font-weight:normal; font-size:16px;}
 */p{font-family: 'Open Sans', sans-serif; font-size:13px; padding-bottom:20px;}
-a{color:#9cff00; text-decoration:none;}
-a:hover{ color:red;}
+a{color:#9cff00;}
+a:hover{color:red;}
 h1:hover{color:blue;}
 h2:hover{color:blue;}
 
