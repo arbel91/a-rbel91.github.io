@@ -12,7 +12,7 @@ img {
   opacity: .3;
 filter: alpha(opacity=100)
 }
-img:hover {
+sidenav, img:hover {
   opacity: 1;
   filter: alpha(opacity=100)
 }
@@ -20,6 +20,7 @@ img:hover {
 body {
   font-family: sans-serif;
 }
+
 </style>
 
 </head>
@@ -29,7 +30,7 @@ body {
 <link rel="stylesheet" href="main.css">
 <script type="restaurant.js"></script>
   <center>
-<table border="4">
+<table border="0">
   <div class="container">
 
   </div>
@@ -67,7 +68,7 @@ body {
         <img src= "https://img.freepik.com/free-vector/elegant-variety-restaurant-banners_23-2147696609.jpg?size=338&ext=jpg">
         <img src="" alt="">
            <div class="caption">
-             <p>Time To Eat Yourself to FItness</p>
+             <p>Time To Eat Yourself to Fitness</p>
            </div>
            </a>
          </div>
@@ -92,23 +93,101 @@ body {
 
     <button class="accordion">All Meals Are 100% Whole Grain</button>
     <div class="panel">
-<br>
-    </div>
+
+
+
 
     <button class="accordion">LowGlycemic Index Foods</button>
     <div class="panel">
+
+</ul>
+
+<div class="container2">
+         <div class="row">
+           <div  class="col-md-6">
+                <div class="thumbnail">
+                  <div class="a">
+                <h1>Jerk Sweet Potato & Black Bean Curry <i>12$</i> </h1>
+                    <p>
+                  2 onions 1 diced, 1 roughly chopped <br>
+              2 tbsp sunflower oil <br>
+              50g ginger <br>
+              Roughly chopped <br>
+              small bunch coriander, leaves and stalks separated <br>
+              3 tbsp jerk seasoning <br>
+              2 thyme sprigs <br>
+              400g can chopped tomato <br>
+              4 tbsp red wine vinegar <br>
+              3 tbsp demerara sugar <br>
+              2 vegetable stock cubes, crumbled <br>
+              1kg sweet potato <br>
+              Peeled and cut into chunks <br>
+              2 x 400g cans black beans, rinsed and drained <br>
+              450g jar roasted red pepper, cut into thick slices</p></pre>
+                  <div class="caption">
+                  <b> <a href="https://www.bbcgoodfood.com/recipes/2835667/jerk-sweet-potato-and-black-bean-curry">Reference</a></b>
+                  </div>
+                  </a>
+                </div>
+               </div>
+              </div>
+
+                              <div class="thumbnail">
+                                <div class="a">
+                              <h1>Crab-stuffed Avocados <i>6$</i> </h1>
+
+                                  <p>100g white crabmeat <br>
+                                    1 tsp Dijon mustard <br>
+                                    2 tbsp olive oil <br>
+
+                                    handful basil 
+
+                                     leaves, shredded with a few of the smaller leaves left whole, to serve <br>
+                                    1 red chilli, deseeded and chopped <br>
+                                    2 avocados <br>
+                                </p>
+                                <div class="caption">
+                                <b> <a href="https://www.bbcgoodfood.com/recipes/9093/crabstuffed-avocados">Reference</a></b>
+                                </div>
+                                </a>
+                              </div>
+                             </div>
+                            </div>
 <br>
     </div>
     <button class="accordion">Vegan Options</button>
     <div class="panel"> <br>
+      <h1></h1>
+      <p></p>
     </div>
     <button class="accordion">Keto Options</button>
       <div class="panel"> <br>
+        <h1></h1>
+        <p></p>
 </div>
       <button class="accordion">Paleo Options</button>
         <div class="panel">
+          <h1></h1>
+          <p></p>
 <br>
     </div>
+
+    <script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
     <!-- Side navigation -->
     <div class="sidenav">
       <a href="index.html">Index</a>
