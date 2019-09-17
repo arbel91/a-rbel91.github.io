@@ -119,3 +119,31 @@ button.accordion:hover {
   display: none;
   overflow: hidden;
 }
+
+h1 {
+ color: red;
+   text-align: center;
+   font-style: bold;
+   font-style: normal;
+   font-family: sans-serif;
+}
+footer {
+ color: red;
+ text-align: center;
+}
+a:link {
+ color:red;
+}
+a:visited {
+ color:darkslateblue;
+}
+a:hover {
+ font-weight: bold;
+ color: darkslateblue;
+}
+a:active: {
+ color: darkslateblue;
+}
+body{
+ background-color:grey;
+}
