@@ -92,13 +92,13 @@ body {
   <tr>
 
     <button class="accordion">All Meals Are 100% Whole Grain</button>
-    <div class="panel">
+    <div class="card">
 
 
 
 
     <button class="accordion">LowGlycemic Index Foods</button>
-    <div class="panel">
+    <div class="card">
 
 </ul>
 
@@ -158,7 +158,7 @@ body {
 <br>
     </div>
     <button class="accordion">Vegan Options</button>
-    <div class="panel"> <br>
+    <div class="card"> <br>
 
     </ul>
 
@@ -219,7 +219,7 @@ body {
                                 </div>
     </div>
     <button class="accordion">Keto Options</button>
-      <div class="panel"> <br>
+      <div class="card"> <br>
         <div class="container2">
                  <div class="row">
                    <div  class="col-md-6">
@@ -276,7 +276,7 @@ Fresh basil leaves, to serve <br>
                                     </div>
 </div>
       <button class="accordion">Paleo Options</button>
-        <div class="panel">
+        <div class="card">
           <div class="container2">
                    <div class="row">
                      <div  class="col-md-6">
@@ -327,13 +327,12 @@ var acc = document.getElementsByClassName("accordion");
 var i;
 
 for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
+  acc[i].addEventListener("click", function() { this.classList.toggle("active");
+    var card = this.nextElementSibling;
+    if (card.style.display === "block") {
+      card.style.display = "none";
     } else {
-      panel.style.display = "block";
+      card.style.display = "block";
     }
   });
 }
