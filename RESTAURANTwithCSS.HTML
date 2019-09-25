@@ -1,6 +1,68 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <div id="header">
+  <span id="title">The Health Stop</span>
+  <br><sup id="subTitle">The healthiest food in all for all.</sup>
+  <div id="navBar">
+    <a class="links" href="home.php">Home</a>
+    <a class="links" id="dropdown" href="resthome.html">Menu</a>
+    <a class="links" href="reviews.php">Reviews</a>
+    <a class="links" href="reservations.php">Reservations</a>
+    <a class="links" href="staff.php">Staff</a>
+    <form class="dropList" action="resthome.html" method="post">
+      <input type="submit" name="food" value="Breakfast"></input>
+      <!-- Goto the menu; filter results to only breakfast (maybe using POST) -->
+      <input type="submit" name="food" value="Dinner"></input>
+      <input type="submit" name="food" value="Desert"></input>
+      <input type="submit" name="food" value="Drinks"></input>
+    </form>
+  </div>
+</div>
+<script>
+  CheckPage();
+
+  function CheckPage() {
+    var i;
+    var x = document.getElementsByClassName("links");
+    for (i = 0; i < x.length; i++) {
+      if (x[i].href.substring(location.pathname.lastIndexOf("/") + 30) == window.location.pathname.substring(location.pathname.lastIndexOf("/") + 1)) {
+        x[i].setAttribute("style", "border-bottom: 2px solid red;");
+      } else {
+        x[i].setAttribute("style", "border-bottom: 2px solid rgba(0, 0, 0, 0);"); //creates an invisible border to ensure all links stay the same size
+      }
+    }
+  }
+</script>
+<script>
+  //Handles the drop-down menu
+  var dropdown = $("#dropdown");
+  var dropList = $(".dropList");
+  var slideSpeed = 100;
+  $(document).ready(function() {
+    dropdown.mouseenter(function() {
+      dropList.slideDown(slideSpeed);
+    });
+    dropdown.mouseleave(function() {
+      setTimeout(function() {
+        if (dropList.is(":hover")) {
+          dropList.css("display", "block");
+        } else {
+          dropList.slideUp(slideSpeed);
+        }
+      }, slideSpeed);
+    });
+    dropList.mouseleave(function() {
+      setTimeout(function() {
+        if (dropdown.is(":hover")) {
+          dropList.css("display", "block");
+        } else {
+          dropList.slideUp(slideSpeed);
+        }
+      }, slideSpeed);
+    });
+  });
+</script>
 <title> The Health Stop </title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -282,7 +344,7 @@ Fresh basil leaves, to serve <br>
                      <div  class="col-md-6">
                           <div class="thumbnail">
                             <div class="a">
-                              <img src="https://res.cloudinary.com/paleoleap/image/upload/f_auto,q_70/v1511927157/video-recipes/matcha-smoothie.jpg" width="500" height="454" alt="">
+                              <img src="https://res.cloudinary.com/paleoleap/image/upload/f_auto,q_70/v1511927157/video-recipes/matcha-smoothie.jpg" width="500" height="454" alt="" class"img-thumbnail">
                           <h1>Matcha Smoothie <i>7.86$</i> </h1>
                               <p>
                                 2 bananas <br>
