@@ -2,12 +2,17 @@
     margin: 0;
     padding: 0;
 }
-header{
-    margin: auto;
-    width: 80%;
+.jumboton, header{
+  background-image: url(https://media3.giphy.com/media/xUOwG5xjkc2lQp6TBe/giphy.gif?cid=790b7611ce324a2f34f99750da4a926031bbd16a0be0f7e5&rid=giphy.gif);
+  color: red;
+  margin: auto;
+    width: 100%;
+    height: 15%;
     text-align: center;
-    font-size: 35px;
-    background-color: rgba(255, 255, 255, 0.7);
+    font-size: 70px;
+    font-weight: bold;
+    font-family: fantasy; 
+
 }
 
 
@@ -31,7 +36,7 @@ display: none;
 #box {
     position: absolute;
     width: 400px;
-    height: 500px;
+    height: 1000px;
     top: 20%;
     left: 35%;
     background: -webkit-linear-gradient(top, #6d0019 0%,#a50321 51%,#6d0019 100% );
