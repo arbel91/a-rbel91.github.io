@@ -17,7 +17,7 @@ h1:hover{color:red;}
 h2:hover{color:blue;}
 a:hover[href="https://github.com/arbel91/arbel91.github.io"] {color:white;}
 a:hover[href="https://wordpress.com/read/feeds/21257216"] {color:white;}
- header {background-color: blue; font-size: 2em;}
+ header {background-color: black; font-size: 2em; text-align: center;}
  hr {border-bottom: color:darkblue}
  body {
  	font: bold 11px/1.5em Verdana;
