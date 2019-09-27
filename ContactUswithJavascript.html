@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Contact The Health Stop</title>
+    <style type="text/css">
+@import "compass/css3";
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900");
+@import url("https://fonts.googleapis.com/css?family=Pacifico");
+
+    label, input, textarea {
+      display:block;
+    }
+    label {border:1px solid #FF9800 !important; background:transparent !important; color:#555 !important; transition:0.5s;}
+    label:hover{background:#FF9800 !important; color:white !important;}
+      h1 {border:1px solid #FF9800 !important; background:transparent !important; color:#555 !important; transition:0.5s;}
+      h1:hover{background:#FF9800 !important; color:white !important;}
+
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  </head>
+  <body>
+
+    <h1>Contact Me</h1>
+    <form>
+      <label>Email <input type="email" class="email"/> </label>
+      <label>Subject<input type="text" class="subject"/></label>
+      <label> Message <textarea class="message"></textarea> </label>
+      <button type="submit" class="submit" >Send</button>
+    </form>
+
+    <div id="status">This will show the status of the form validation.</div>
+
+    <script type="text/javascript">
+      console.log("hello world")
+      $(document).ready(function() {
+         $('.submit').click(function (event) {
+            event.preventDefault()
+             console.log('clicked button')
+
+              var email = $('.email').val()
+              var subject = $('.subject').val()
+              var message = $('.message').val()
+              var statusElement = $('#status');
+              statusElement.empty();
+
+              if(email.length > 5 && email.includes('@') && email.includes('.')) {
+                statusElement.append('<div> Email is Valid </div>')
+                console.log('email is valid')
+              }else{
+                statusElement.append('<div> Email is Not Valid </div>')
+                console.log('email is not valid')
+              }
+
+              if(subject.length >= 2) {
+                statusElement.append('<div> Subject is Valid </div>')
+              }else {
+                  statusElement.append('<div> Subject is Not Valid </div>' )
+              }
+
+              if(message.length >= 10) {
+                statusElement.append('<div>Message is Valid</div> ')
+              }else{
+                  statusElement.append('<div> Message is Not Valid</div>')
+                }
+              })
+
+
+       })
+     window.alert("Works Better With JavaScript");
+
+    </script>
+
+    <noscript>
+      window.alert("Works Better with JavaScript")
+    </noscript>
+
+  </body>
+</html>

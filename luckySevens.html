@@ -50,27 +50,27 @@ First Bet: <input class="txtbox" type="text" id="theFirstBet" name="bet" value="
          // THIS IF STATEMENT DETERMINES THE WINNER OF THE GAME BY MAKING dieResult EQUAL SEVEN
          if (dieResult == 7){
          cash = cash+win;
-         var last_roll = cashPutIntoGame[cashPutIntoGame.length -1];
-         var last_update = last_roll + win;
-         cashPutIntoGame.push(last_update);
-         // THE ELSE STATEMENT DETERMINES THE LOSER OF THE GAME BY
+         var mostRecentRoll = cashPutIntoGame[cashPutIntoGame.length -1]; //length property returns the length of
+         var mostRecentUpdate = mostRecentRoll + win;
+         cashPutIntoGame.push(mostRecentUpdate); // push() method adds new items to the end of an array, and returns the new length. Without this the mostRecentUpdate wont update.
+         // THE ELSE STATEMENT DETERMINES THE LOSER OF THE GAME BY cash-- WHICH DECREMENTS THE AMOUNT OF CASH LEFT
          }else {
          cash--;
          rollCounter++;
-         var last_roll = cashPutIntoGame[cashPutIntoGame.length -1];
-         var last_update = last_roll - loss;
-         cashPutIntoGame.push(last_update);
+         var mostRecentRoll = cashPutIntoGame[cashPutIntoGame.length -1]; //The length property of the JavaScript object is used to find out the size of that object.
+         var mostRecentUpdate = mostRecentRoll - loss;
+         cashPutIntoGame.push(mostRecentUpdate);
          roll = roll++;
          }
      }while(cash>0);
      var maximumAmountOfRolls = 0;
-     maximumAmountOfRolls = Math.max.apply(Math, cashPutIntoGame);
-     numRolls = cashPutIntoGame.indexOf(maximumAmountOfRolls);
-     if(numRolls<1){
-       numRolls = 0;
+     maximumAmountOfRolls = Math.max.apply(Math, cashPutIntoGame); //  The Math.max() function returns the largest of the given numbers.  // .apply vs .call  when .call is used HIGHEST NUMBER OF CASH ONE becomes NAN while when using .apply allows for variability.
+     numberOfRolls = cashPutIntoGame.indexOf(maximumAmountOfRolls); //.indexOf is another way of identifying the position of,   cashPutIntoGame The indexOf method uses strict equality ( === ) to determine if an element matches your search. This works great for primitives like strings and numbers
+     if(numberOfRolls<1){
+       numberOfRolls = 0;
      }
-     document.getElementById("gambler").innerHTML=
-     ("<center><br><br><table style=\"width: 100% height: 100%;\"><th colspan=\"5 \"; class=\"th1\">Results:</th><br><tr><th class=\"th2\">First Bet</th><th class=\"th2\">$" + theFirstBet + ".00</th></tr><tr><td>Total Rolls Before Running Out of Cash:<br></td><td>"+ roll +"</td></tr><tr><td>Highest Amount of cash Won:<br></td><td>"+maximumAmountOfRolls+"</td></tr><tr><td>Amount of times where Highest Amount was Held:<br></td><td>"+ numRolls + "</td></tr></table></center>");
+     document.getElementById("gambler").innerHTML= // The innerHTML property is part of the Document Object Model (DOM) that allows Javascript code to manipulate a website being displayed. Specifically, it allows reading and replacing everything within a given DOM element (HTML tag)
+     ("<center><br><br><table style=\"width: 100% height: 100%;\"><th colspan=\"5 \"; class=\"th1\">Results:</th><br><tr><th class=\"th2\">First Bet</th><th class=\"th2\">$" + theFirstBet + ".00</th></tr><tr><td>Total Rolls Before Running Out of Cash:<br></td><td>"+ roll +"</td></tr><tr><td>Highest Amount of cash Won:<br></td><td>"+maximumAmountOfRolls+"</td></tr><tr><td>Amount of times where Highest Amount was Held:<br></td><td>"+ numberOfRolls + "</td></tr></table></center>");
      document.getElementById("playButton").innerHTML="You Never Know";
     }
 
@@ -78,9 +78,9 @@ First Bet: <input class="txtbox" type="text" id="theFirstBet" name="bet" value="
       var firstDie = document.getElementById('firstDie');
       var secondDie = document.getElementById('secondDie');
       var status = document.getElementById('status');
-      var firstDie1 = Math.floor(Math.random() *7) +1;
-      var secondDie2 = Math.floor(Math.random() *7) +1;
-      var diceResult = firstDie1 + secondDie2;
+      var firstDie1 = Math.floor(Math.random() *7) +1;    //the floor() function rounds a number down and returns an integer value. As a result it needs to be added to +1 to be a whole number
+      var secondDie2 = Math.floor(Math.random() *7) +1;   // .random does exactly just that,  randomizes
+      var diceResult = firstDie1 + secondDie2;    // will update the first statas class as it is called @status.html = "The result was" + diceResult+ ".";
 
       firstDie.innerHTML = firstDie1;
       secondDie.innerHTML = secondDie2;
