@@ -1,5 +1,7 @@
 body {
-    background-color: black;
+    background:url('https://media3.giphy.com/media/3d0bbUl1Vyzb5aE41y/giphy.gif?cid=790b76117c2539d4f38a58dca1aa686edbc23ce893d2ff99&rid=giphy.gif') ;
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: Impact, serif;
     font-style: oblique;
     font-size: 30px;
